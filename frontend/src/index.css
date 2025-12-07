@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #646cff;
+    --primary-hover: #535bf2;
+    --bg-color: #242424;
+    --text-color: rgba(255, 255, 255, 0.87);
+    --card-bg: #1a1a1a;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.card {
+    padding: 2em;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 2rem auto;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    color: white;
+}
+
+button:hover {
+    border-color: var(--primary-hover);
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+input {
+    padding: 0.8em;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: #333;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.error {
+    color: #ff6b6b;
+    margin-top: 1rem;
+}
+
+.text-display {
+    text-align: left;
+    background: #333;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    min-height: 200px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.status {
+    height: 24px;
+    color: #888;
+    font-style: italic;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border-left-color: var(--primary-color);
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.switch {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-container input {
+    width: auto;
+    margin-bottom: 0;
+    cursor: pointer;
+}
